@@ -10,19 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-      
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '7.4'
-          
-      - name: Execute PHP script
-        run: |
-          php collect2send.php
-          git pull
-          git push -f
       
       - name: send created sub
         uses: appleboy/telegram-action@master
